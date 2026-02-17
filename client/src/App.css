@@ -1,0 +1,322 @@
+/* Google Fonts - Inter & Plus Jakarta Sans */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap');
+
+:root {
+  --primary: #6366f1;        /* Indigo */
+  --primary-soft: #eef2ff;
+  --bg: #fdfdff;            
+  --surface: #ffffff;
+  --text-main: #1e293b;     
+  --text-muted: #64748b;    
+  --border: #f1f5f9;
+  --success: #10b981;       /* Emerald Green */
+  --success-glow: rgba(16, 185, 129, 0.4);
+  --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow);
+  margin-bottom: 3rem;
+  position: sticky;
+  top: 20px;
+  z-index: 1000;
+}
+
+.logo { 
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.5rem; 
+  font-weight: 800; 
+  color: var(--text-main);
+}
+
+.search-bar input {
+  padding: 12px 24px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  width: 400px;
+  background: #f8fafc;
+  outline: none;
+}
+
+/* --- LAYOUT GRID --- */
+.main-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr 360px;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* --- SEPET PANELİ --- */
+.cart-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 100px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.cart-item div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.remove-btn {
+  background: #fff1f2;
+  color: #e11d48;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-btn:hover {
+  background: #fb7185;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* YENİ: ÖDEMEYE GEÇ BUTONU (Sepet Paneli Altındaki) */
+.checkout-btn {
+  background: linear-gradient(135deg, var(--primary) 0%, #4338ca 100%);
+  color: white;
+  padding: 18px;
+  border: none;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.4);
+}
+
+.checkout-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px -5px rgba(99, 102, 241, 0.5);
+  filter: brightness(1.1);
+}
+
+/* --- ÖDEME EKRANI (CHECKOUT PAGE) --- */
+.checkout-container {
+  max-width: 550px;
+  margin: 50px auto;
+  background: var(--surface);
+  padding: 3.5rem;
+  border-radius: 32px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkout-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checkout-form input {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #f8fafc;
+  width: 100%;
+  font-size: 1rem;
+}
+
+/* YENİ NESİL YEŞİL BUTON (Pay Button) */
+.pay-btn {
+  background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  color: white;
+  padding: 20px;
+  border: none;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 10px 25px -5px var(--success-glow);
+  width: 100%;
+}
+
+.pay-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px -5px var(--success-glow);
+}
+
+/* --- ÜRÜN KARTLARI --- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 24px;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  background: #f8fafc;
+  border-radius: 18px;
+  margin-bottom: 1rem;
+}
+
+.add-btn {
+  background: var(--primary);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #4338ca;
+  transform: scale(1.02);
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+  background: var(--surface);
+  border-radius: 24px;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.cat-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 10px;
+  color: var(--text-muted);
+}
+
+.cat-btn.active {
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.total-section {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px dashed #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+/* Tüm ürün isimlerini "Oyuncu Mouse" rengiyle (Slate) eşitleme */
+.product-link, 
+.product-link:visited, 
+.product-link:active,
+.card h3 {
+  color: var(--text-main) !important; /* Tarayıcı renklerini ezer ve siyah/koyu gri yapar */
+  transition: color 0.2s ease;
+}
+
+/* Üzerine gelince (hover) hafifçe Indigo rengine dönsün (opsiyonel) */
+.card:hover h3 {
+  color: var(--primary) !important;
+}
+/* --- YENİ NESİL MAĞAZAYA DÖN BUTONU --- */
+.back-to-store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8fafc; /* Hafif gri-beyaz arka plan */
+  color: var(--text-main);
+  padding: 10px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: fit-content;
+}
+
+.back-to-store-btn .arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.back-to-store-btn:hover {
+  background: var(--white);
+  color: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+}
+
+/* Üzerine gelince okun sola kayma efekti */
+.back-to-store-btn:hover .arrow {
+  transform: translateX(-6px);
+}
