@@ -73,3 +73,4 @@ Terminalde çıkan linke (genellikle http://localhost:5173) tıklayın. Tebrikle
 
 Ekran Görüntüsü 📸
 <img width="1786" height="810" alt="techpro" src="https://github.com/user-attachments/assets/76db8e9d-ebaf-4b0a-a32a-35a4fa202d4a" />
+
