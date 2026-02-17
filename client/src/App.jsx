@@ -146,7 +146,7 @@ export default function App() {
   });
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/products')
+    fetch('https://eticaret-projesi.onrender.com/api/products')
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.error("Hata:", err));

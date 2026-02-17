@@ -33,7 +33,7 @@ app.post('/api/products', (req, res) => {
 });
 
 // Sunucuyu Başlat
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`🚀 Sunucu (Mock Modunda) ${PORT} portunda çalışıyor...`);
+  console.log(`Sunucu ${PORT} portunda başarıyla çalışıyor!`);
 });
