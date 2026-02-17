@@ -7,7 +7,7 @@
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 </p>
 
-## 🔗 [Canlı Demo Linki](https://senin-site-linkin.vercel.app)
+## 🔗 [Canlı Demo Linki](https://eticaret-projesi.vercel.app)
 
 
 🌟 Proje Hakkında
