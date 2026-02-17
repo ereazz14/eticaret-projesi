@@ -28,49 +28,6 @@ TechPro, modern web standartları ile geliştirilmiş, kullanıcı odaklı bir e
 
 
 
-🚀 Projeyi Kendi Bilgisayarınızda Çalıştırın
-
-GitHub üzerinden kodları inceledikten sonra (klavyeden . tuşuna basarak göz atabilirsiniz), projeyi yerelinizde ayağa kaldırmak için aşağıdaki adımları izleyin:
-
-1. Ön Hazırlık
-Bilgisayarınızda şunların kurulu olduğundan emin olun:
-
-Node.js (LTS sürümü önerilir)
-
-Git
-
-2. Projeyi İndirme (Clone)
-Terminalinizi açın ve projeyi bilgisayarınıza indirin:
-
-
-git clone https://github.com/ereazz14/eticaret-projesi.git
-cd eticaret-projesi
-3. Backend (Sunucu) Kurulumu
-Projenin verilerini sağlayan API'yi başlatmak için ana dizindeyken:
-
-
-# Gerekli kütüphaneleri yükle (Express, Cors vb.)
-npm install
-
-# Sunucuyu başlat
-node index.js
-Not: Sunucu şu an http://localhost:5000 adresinde çalışmaya başlayacaktır. Bu terminali kapatmayın.
-
-4. Frontend (React) Kurulumu
-Sitenin arayüzünü görmek için yeni bir terminal açın ve şu adımları izleyin:
-
-
-# Client klasörüne gir
-cd client
-
-# React paketlerini yükle
-npm install
-
-# Uygulamayı geliştirme modunda çalıştır
-npm run dev
-5. Tarayıcıda Görüntüleme
-Terminalde çıkan linke (genellikle http://localhost:5173) tıklayın. Tebrikler! TechPro artık sizin bilgisayarınızda canlı.
-
 Ekran Görüntüsü 📸
 <img width="1786" height="810" alt="techpro" src="https://github.com/user-attachments/assets/76db8e9d-ebaf-4b0a-a32a-35a4fa202d4a" />
 
