@@ -7,7 +7,8 @@
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 </p>
 
-## 🔗 [Canlı Demo Linki](https://eticaret-projesi.vercel.app) Sunucu ilk 50 saniye uyku modunda olacağı için açılmayacaktır. Daha sonrasında sayfayı yenileyerek görüntüleyebilirsiniz.
+## 🔗 [Canlı Demo Linki](https://eticaret-projesi.vercel.app) 
+"Not: Demo sunucusu uyku modunda olabilir, ilk işlem 1 dakika sürebilir."
 
 
 🌟 Proje Hakkında
